@@ -9,6 +9,16 @@
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
+  <component name="ProjectResources">
+    <resource url="https://www.openehr.org/am/Archetype.xsd" location="$PROJECT_DIR$/athena-openehr-its-xml-catalog/src/main/resources/xsd/am/Archetype.xsd" />
+    <resource url="https://www.openehr.org/am/OpenehrProfile.xsd" location="$PROJECT_DIR$/athena-openehr-its-xml-catalog/src/main/resources/xsd/am/OpenehrProfile.xsd" />
+    <resource url="https://www.openehr.org/base/BaseTypes.xsd" location="$PROJECT_DIR$/athena-openehr-its-xml-catalog/src/main/resources/xsd/base/BaseTypes.xsd" />
+    <resource url="https://www.openehr.org/base/Resource.xsd" location="$PROJECT_DIR$/athena-openehr-its-xml-catalog/src/main/resources/xsd/base/Resource.xsd" />
+    <resource url="https://www.openehr.org/rm/Composition.xsd" location="$PROJECT_DIR$/athena-openehr-its-xml-catalog/src/main/resources/xsd/rm/Composition.xsd" />
+    <resource url="https://www.openehr.org/rm/Content.xsd" location="$PROJECT_DIR$/athena-openehr-its-xml-catalog/src/main/resources/xsd/rm/Content.xsd" />
+    <resource url="https://www.openehr.org/rm/Structure.xsd" location="$PROJECT_DIR$/athena-openehr-its-xml-catalog/src/main/resources/xsd/rm/Structure.xsd" />
+    <resource url="https://www.openehr.org/rm/Version.xsd" location="$PROJECT_DIR$/athena-openehr-its-xml-catalog/src/main/resources/xsd/rm/Version.xsd" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="graalvm-jdk-21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
