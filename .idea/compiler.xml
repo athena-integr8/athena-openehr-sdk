@@ -10,6 +10,7 @@
         <module name="athena-openehr-its-xml-catalog" />
         <module name="athena-openehr-am" />
         <module name="athena-openehr-base" />
+        <module name="athena-openehr-tools" />
       </profile>
     </annotationProcessing>
   </component>
