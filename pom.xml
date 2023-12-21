@@ -21,5 +21,7 @@
         <module>athena-openehr-its-xml-catalog</module>
         <module>athena-openehr-base</module>
         <module>athena-openehr-am</module>
+        <module>athena-openehr-rm</module>
+        <module>athena-openehr-tools</module>
     </modules>
 </project>

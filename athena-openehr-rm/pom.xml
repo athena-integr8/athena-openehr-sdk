@@ -10,9 +10,9 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>athena-openehr-am</artifactId>
+    <artifactId>athena-openehr-rm</artifactId>
 
-    <name>Athena :: OpenEHR SDK :: Archetype Model</name>
+    <name>Athena :: OpenEHR :: Reference Model</name>
 
     <properties>
         <jaxb-camelcase-plugin.version>1.0.0-SNAPSHOT</jaxb-camelcase-plugin.version>
@@ -72,7 +72,7 @@
                         <arg>-XEpisode</arg>
                         <arg>${project.build.directory}/classes/META-INF/sun-jaxb.episode</arg>
                     </args>
-                    <generatePackage>io.openehr.am</generatePackage>
+                    <generatePackage>io.openehr.rm</generatePackage>
                     <episode>false</episode> <!-- using our own episode plugin -->
                     <catalogs>
                         <catalog>
@@ -94,7 +94,7 @@
                             <dependencyResource>
                                 <groupId>io.athena</groupId>
                                 <artifactId>athena-openehr-its-xml-catalog</artifactId>
-                                <resource>xsd/am/Template.xsd</resource>
+                                <resource>xsd/rm/Extract.xsd</resource>
                             </dependencyResource>
                         </schema>
                     </schemas>
