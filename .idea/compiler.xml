@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="athena-openehr-sdk" />
+        <module name="athena-openehr-base" />
+        <module name="athena-openehr-its-xml-catalog" />
+        <module name="athena-openehr-am" />
       </profile>
     </annotationProcessing>
   </component>

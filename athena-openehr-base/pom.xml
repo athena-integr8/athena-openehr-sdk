@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.athena</groupId>
+        <artifactId>athena-openehr-sdk</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>athena-openehr-base</artifactId>
+
+    <name>Athena :: OpenEHR SDK :: Base</name>
+
+    <properties>
+        <jaxb-camelcase-plugin.version>1.0.0-SNAPSHOT</jaxb-camelcase-plugin.version>
+        <jaxb-episode-plugin.version>1.0.0-SNAPSHOT</jaxb-episode-plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.athena</groupId>
+                <artifactId>athena-openehr-its-xml-catalog</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.athena</groupId>
+                <artifactId>athena-jaxb-camelcase-plugin</artifactId>
+                <version>${jaxb-camelcase-plugin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.athena</groupId>
+                <artifactId>athena-jaxb-episode-plugin</artifactId>
+                <version>${jaxb-episode-plugin.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb</groupId>
+                <artifactId>jaxb-maven-plugin</artifactId>
+                <version>${jaxb-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <extension>true</extension>
+                    <strict>false</strict>
+                    <args>
+                        <arg>-XCamelCase</arg>
+                        <arg>-XEpisode</arg>
+                        <arg>${project.build.directory}/classes/META-INF/sun-jaxb.episode</arg>
+                    </args>
+                    <generatePackage>io.openehr.base</generatePackage>
+                    <episode>false</episode> <!-- using our own episode plugin -->
+                    <catalogs>
+                        <catalog>
+                            <dependencyResource>
+                                <groupId>io.athena</groupId>
+                                <artifactId>athena-openehr-its-xml-catalog</artifactId>
+                                <resource>openehr-xml-catalog.xml</resource>
+                            </dependencyResource>
+                        </catalog>
+                    </catalogs>
+                    <schemas>
+                        <schema>
+                            <dependencyResource>
+                                <groupId>io.athena</groupId>
+                                <artifactId>athena-openehr-its-xml-catalog</artifactId>
+                                <resource>xsd/base/Resource.xsd</resource>
+                            </dependencyResource>
+                        </schema>
+                    </schemas>
+                    <plugins>
+                        <plugin>
+                            <groupId>io.athena</groupId>
+                            <artifactId>athena-jaxb-camelcase-plugin</artifactId>
+                        </plugin>
+                        <plugin>
+                            <groupId>io.athena</groupId>
+                            <artifactId>athena-jaxb-episode-plugin</artifactId>
+                        </plugin>
+                    </plugins>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
