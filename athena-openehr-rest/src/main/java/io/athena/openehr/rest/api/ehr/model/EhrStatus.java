@@ -1,4 +1,4 @@
-package io.athena.openehr.rest.api.ehr;
+package io.athena.openehr.rest.api.ehr.model;
 
 import io.openehr.base.DvText;
 import io.openehr.base.FeederAudit;
