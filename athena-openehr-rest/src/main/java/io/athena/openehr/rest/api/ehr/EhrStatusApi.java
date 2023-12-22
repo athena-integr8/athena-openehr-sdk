@@ -1,28 +1,28 @@
 package io.athena.openehr.rest.api.ehr;
 
 import io.athena.openehr.rest.api.ehr.model.EhrStatus;
-import jakarta.annotation.Nonnull;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.ws.rs.core.Response;
 
 public interface EhrStatusApi {
 
-    Response getEhrStatusByVersionId(@Nonnull final String theEhrId,
-                                     @Nonnull final String theVersionId);
+    Response getEhrStatusByVersionId(@NotBlank final String theEhrId,
+                                     @NotBlank final String theVersionId);
 
-    Response getEhrStatusAtTime(@Nonnull final String theEhrId,
-                                @Nonnull final String theVersionAtTime);
+    Response getEhrStatusAtTime(@NotBlank final String theEhrId,
+                                @NotBlank final String theVersionAtTime);
 
-    Response updateEhrStatus(@Nonnull final String theEhrId,
-                             @Nonnull final String theIfMatch,
-                             @Nonnull final String thePrefer,
-                             @Nonnull final EhrStatus theEhrStatus);
+    Response updateEhrStatus(@NotBlank final String theEhrId,
+                             @NotBlank final String theIfMatch,
+                             @NotBlank final String thePrefer,
+                             @NotBlank final EhrStatus theEhrStatus);
 
-    Response getVersionedEhrStatus(@Nonnull final String theEhrId);
+    Response getVersionedEhrStatus(@NotBlank final String theEhrId);
 
-    Response getVersionedEhrStatusVersionAtTime(@Nonnull final String theEhrId,
-                                                @Nonnull final String theVersionAtTime);
+    Response getVersionedEhrStatusVersionAtTime(@NotBlank final String theEhrId,
+                                                @NotBlank final String theVersionAtTime);
 
-    Response getVersionedEhrStatusVersionById(@Nonnull final String theEhrId,
-                                              @Nonnull final String theVersionUid);
+    Response getVersionedEhrStatusVersionById(@NotBlank final String theEhrId,
+                                              @NotBlank final String theVersionUid);
 
 }

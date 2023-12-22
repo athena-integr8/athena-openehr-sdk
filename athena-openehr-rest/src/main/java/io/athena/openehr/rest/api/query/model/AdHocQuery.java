@@ -1,14 +1,15 @@
 package io.athena.openehr.rest.api.query.model;
 
-import jakarta.ws.rs.core.UriInfo;
 import lombok.Data;
+
+import java.util.Map;
 
 @Data
 public class AdHocQuery {
 
-    String theQuery;
-    Integer theOffset;
-    Integer theFetch;
-    UriInfo theUriInfo;
+    String query;
+    Integer offset;
+    Integer fetch;
+    Map<String, Object> queryParameters;
 
 }
