@@ -1,4 +1,4 @@
-package io.athena.openehr.rest.model;
+package io.athena.openehr.rest.api.ehr;
 
 import io.openehr.base.DvDateTime;
 import io.openehr.base.HierObjectId;

@@ -1,7 +1,5 @@
 package io.athena.openehr.rest.api.query;
 
-import io.athena.openehr.rest.model.AdHocQuery;
-import io.athena.openehr.rest.model.StoredQuery;
 import jakarta.annotation.Nonnull;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;

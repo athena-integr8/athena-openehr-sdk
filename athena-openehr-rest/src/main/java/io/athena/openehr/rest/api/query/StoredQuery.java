@@ -1,4 +1,4 @@
-package io.athena.openehr.rest.model;
+package io.athena.openehr.rest.api.query;
 
 import lombok.Data;
 

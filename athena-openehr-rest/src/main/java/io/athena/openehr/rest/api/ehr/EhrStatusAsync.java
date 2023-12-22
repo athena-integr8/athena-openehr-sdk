@@ -1,6 +1,5 @@
 package io.athena.openehr.rest.api.ehr;
 
-import io.athena.openehr.rest.model.EhrStatus;
 import jakarta.annotation.Nonnull;
 import jakarta.ws.rs.core.Response;
 
