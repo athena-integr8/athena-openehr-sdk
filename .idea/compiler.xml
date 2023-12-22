@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="athena-openehr-rm" />
+        <module name="athena-openehr-rest" />
         <module name="athena-openehr-its-xml-catalog" />
         <module name="athena-openehr-am" />
         <module name="athena-openehr-base" />

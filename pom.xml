@@ -23,5 +23,6 @@
         <module>athena-openehr-am</module>
         <module>athena-openehr-rm</module>
         <module>athena-openehr-tools</module>
+        <module>athena-openehr-rest</module>
     </modules>
 </project>
