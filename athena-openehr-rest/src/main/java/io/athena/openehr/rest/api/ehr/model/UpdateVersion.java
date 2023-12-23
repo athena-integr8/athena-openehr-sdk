@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class UpdateVersion {
 
@@ -18,6 +20,8 @@ public class UpdateVersion {
     @NotNull
     @JsonProperty("lifecycle_state")
     private TerminologyCode lifecycleState;
+
+    private List<UpdateAttestation> attestations;
 
     @NotNull
     @JsonProperty("data")
