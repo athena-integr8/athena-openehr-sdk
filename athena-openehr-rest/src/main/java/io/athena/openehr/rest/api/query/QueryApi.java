@@ -10,29 +10,34 @@ import jakarta.ws.rs.core.UriInfo;
 
 public interface QueryApi {
 
-    Response executeAdHocAQL(@NotBlank final String theQuery,
-                             @Nullable final String theEhrId,
-                             @Nullable final Integer theOffset,
-                             @Nullable final Integer theFetch,
-                             @NotNull final UriInfo theUriInfo);
+    Response executeAdHocAQL(
+            @NotBlank final String theQuery,
+            @Nullable final String theEhrId,
+            @Nullable final Integer theOffset,
+            @Nullable final Integer theFetch,
+            @NotNull final UriInfo theUriInfo);
 
-    Response executeAdHocAQL(@NotNull final AdHocQuery theAdHocQuery);
+    Response executeAdHocAQL(
+            @NotNull final AdHocQuery theAdHocQuery);
 
-    Response executeStoredAQL(@NotBlank final String theQualifiedQueryName,
-                              @Nullable final String theEhrId,
-                              @Nullable final Integer theOffset,
-                              @Nullable final Integer theFetch,
-                              @NotNull final UriInfo theUriInfo);
+    Response executeStoredAQL(
+            @NotBlank final String theQualifiedQueryName,
+            @Nullable final String theEhrId,
+            @Nullable final Integer theOffset,
+            @Nullable final Integer theFetch,
+            @NotNull final UriInfo theUriInfo);
 
-    Response executeStoredAQL(@NotBlank final String theQualifiedQueryName,
-                              @NotNull final StoredQuery theStoredQuery);
+    Response executeStoredAQL(
+            @NotBlank final String theQualifiedQueryName,
+            @NotNull final StoredQuery theStoredQuery);
 
-    Response executeStoredAQLVersion(@NotBlank final String theQualifiedQueryName,
-                                     @NotBlank final String theVersion,
-                                     @Nullable final String theEhrId,
-                                     @Nullable final Integer theOffset,
-                                     @Nullable final Integer theFetch,
-                                     @NotNull final UriInfo theUriInfo);
+    Response executeStoredAQLVersion(
+            @NotBlank final String theQualifiedQueryName,
+            @NotBlank final String theVersion,
+            @Nullable final String theEhrId,
+            @Nullable final Integer theOffset,
+            @Nullable final Integer theFetch,
+            @NotNull final UriInfo theUriInfo);
 
     Response executeStoredAQVersionL(@NotBlank final String theQualifiedQueryName,
                                      @NotBlank final String theVersion,

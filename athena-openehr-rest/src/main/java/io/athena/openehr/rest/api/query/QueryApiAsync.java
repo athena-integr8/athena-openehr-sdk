@@ -13,32 +13,38 @@ import java.util.concurrent.CompletionStage;
 
 public interface QueryApiAsync {
 
-    CompletionStage<Response> executeAdHocAQL(@NotBlank final String theQuery,
-                                              @Nullable final String theEhrId,
-                                              @Nullable final Integer theOffset,
-                                              @Nullable final Integer theFetch,
-                                              @NotNull final UriInfo theUriInfo);
+    CompletionStage<Response> executeAdHocAQL(
+            @NotBlank final String theQuery,
+            @Nullable final String theEhrId,
+            @Nullable final Integer theOffset,
+            @Nullable final Integer theFetch,
+            @NotNull final UriInfo theUriInfo);
 
-    CompletionStage<Response> executeAdHocAQL(@NotNull final AdHocQuery theAdHocQuery);
+    CompletionStage<Response> executeAdHocAQL(
+            @NotNull final AdHocQuery theAdHocQuery);
 
-    CompletionStage<Response> executeStoredAQL(@NotBlank final String theQualifiedQueryName,
-                                               @Nullable final String theEhrId,
-                                               @Nullable final Integer theOffset,
-                                               @Nullable final Integer theFetch,
-                                               @NotNull final UriInfo theUriInfo);
+    CompletionStage<Response> executeStoredAQL(
+            @NotBlank final String theQualifiedQueryName,
+            @Nullable final String theEhrId,
+            @Nullable final Integer theOffset,
+            @Nullable final Integer theFetch,
+            @NotNull final UriInfo theUriInfo);
 
-    CompletionStage<Response> executeStoredAQL(@NotBlank final String theQualifiedQueryName,
-                                               @NotNull final StoredQuery theStoredQuery);
+    CompletionStage<Response> executeStoredAQL(
+            @NotBlank final String theQualifiedQueryName,
+            @NotNull final StoredQuery theStoredQuery);
 
-    CompletionStage<Response> executeStoredAQLVersion(@NotBlank final String theQualifiedQueryName,
-                                                      @NotBlank final String theVersion,
-                                                      @Nullable final String theEhrId,
-                                                      @Nullable final Integer theOffset,
-                                                      @Nullable final Integer theFetch,
-                                                      @NotNull final UriInfo theUriInfo);
+    CompletionStage<Response> executeStoredAQLVersion(
+            @NotBlank final String theQualifiedQueryName,
+            @NotBlank final String theVersion,
+            @Nullable final String theEhrId,
+            @Nullable final Integer theOffset,
+            @Nullable final Integer theFetch,
+            @NotNull final UriInfo theUriInfo);
 
-    CompletionStage<Response> executeStoredAQVersionL(@NotBlank final String theQualifiedQueryName,
-                                                      @NotBlank final String theVersion,
-                                                      @NotNull final StoredQuery theStoredQuery);
+    CompletionStage<Response> executeStoredAQVersionL(
+            @NotBlank final String theQualifiedQueryName,
+            @NotBlank final String theVersion,
+            @NotNull final StoredQuery theStoredQuery);
 
 }

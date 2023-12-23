@@ -8,16 +8,20 @@ import jakarta.ws.rs.core.Response;
 
 public interface EhrApi {
 
-    Response createEhr(@NotBlank final String thePrefer,
-                       @Nullable final EhrStatus theEhrStatus);
+    Response createEhr(
+            @NotBlank final String thePrefer,
+            @Nullable final EhrStatus theEhrStatus);
 
-    Response getEhrBySubjectId(@NotBlank final String theSubjectId,
-                               @Nonnull final String theSubjectNamespace);
+    Response getEhrBySubjectId(
+            @NotBlank final String theSubjectId,
+            @Nonnull final String theSubjectNamespace);
 
-    Response createEhrWithId(@NotBlank final String theEhrId,
-                             @NotBlank final String thePrefer,
-                             @Nullable final EhrStatus theEhrStatus);
+    Response createEhrWithId(
+            @NotBlank final String theEhrId,
+            @NotBlank final String thePrefer,
+            @Nullable final EhrStatus theEhrStatus);
 
-    Response getEhrById(@NotBlank final String theEhrId);
+    Response getEhrById(
+            @NotBlank final String theEhrId);
 
 }

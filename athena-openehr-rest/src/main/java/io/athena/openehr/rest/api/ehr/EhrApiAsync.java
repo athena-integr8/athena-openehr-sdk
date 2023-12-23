@@ -10,16 +10,20 @@ import java.util.concurrent.CompletionStage;
 
 public interface EhrApiAsync {
 
-    CompletionStage<Response> createEhr(@NotBlank final String thePrefer,
-                                        @Nullable final EhrStatus theEhrStatus);
+    CompletionStage<Response> createEhr(
+            @NotBlank final String thePrefer,
+            @Nullable final EhrStatus theEhrStatus);
 
-    CompletionStage<Response> getEhrBySubjectId(@NotBlank final String theSubjectId,
-                                                @NotBlank final String theSubjectNamespace);
+    CompletionStage<Response> getEhrBySubjectId(
+            @NotBlank final String theSubjectId,
+            @NotBlank final String theSubjectNamespace);
 
-    CompletionStage<Response> createEhrWithId(@NotBlank final String theEhrId,
-                                              @NotBlank final String thePrefer,
-                                              @Nullable final EhrStatus theEhrStatus);
+    CompletionStage<Response> createEhrWithId(
+            @NotBlank final String theEhrId,
+            @NotBlank final String thePrefer,
+            @Nullable final EhrStatus theEhrStatus);
 
-    CompletionStage<Response> getEhrById(@NotBlank final String theEhrId);
+    CompletionStage<Response> getEhrById(
+            @NotBlank final String theEhrId);
 
 }
